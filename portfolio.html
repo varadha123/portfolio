@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varadha's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #eaa599;
+        }
+
+        .hero {
+            background: #eaa599;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        #about, #skills, #projects, #contact {
+            padding: 50px;
+            background-color: #fff;
+            margin: 20px 0;
+            transition: all 0.5s ease;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background: #eaa599;
+            color: #fff;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill:hover {
+            background-color: #333;
+        }
+
+        .project {
+            margin-bottom: 40px;
+        }
+
+        .project h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .skill-list {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" style="background-image: url('img1.jpg'); background-size: cover; background-position: center;">
+        <div class="hero">
+            <h1>Hi, I'm Varadha</h1>
+            <p>A Passionate Full Stack Developer</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm Varadha, a passionate Python Full Stack Developer skilled in building robust web applications. I specialize in backend logic using Python and Django and also have proficiency in frontend technologies like HTML, CSS, and JavaScript.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div class="skill">Python Full Stack Development</div>
+            <div class="skill">Web Development using Django</div>
+            <div class="skill">HTML, CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Bootstrap, MySQL, jQuery</div>
+            <div class="skill">Git and Docker</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Essence - E-commerce Website</h3>
+            <p>
+                Essence is an innovative e-commerce platform for selling premium skincare products. The sleek design is built using Bootstrap for the frontend and Python for backend logic.
+            </p>
+        </div>
+        <div class="project">
+            <h3>Aspirus - Hospital Management Website</h3>
+            <p>
+                Aspirus is a hospital management web app that simplifies the process of booking appointments and managing doctor schedules. It uses Python for backend processing and HTML/CSS for the frontend.
+            </p>
+        </div>
+        <div class="project">
+            <h3>Animates - Stray Animal Rescue Website</h3>
+            <p>
+                Animates is a platform built using Django and MySQL that helps manage rescue operations for stray animals and ensures they receive proper care.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me:</p><br>
+        <ul>
+            <li>Email: <a href="mailto:varadhadevanandan96@gmail.com">varadhadevanandan96@gmail.com</a></li>
+            <li>Phone: 8281332916, 8086184624</li>
+            <li>Address: PERUMANNU KALAM, THENARI.P.O, ELAPPULLY, PALAKKAD, KERALA, 678622</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Varadha | All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight / 1.3;
+                if (sectionTop < triggerPoint) {
+                    section.style.transform = 'translateY(0)';
+                    section.style.opacity = '1';
+                } else {
+                    section.style.transform = 'translateY(100px)';
+                    section.style.opacity = '0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
